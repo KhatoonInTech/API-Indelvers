@@ -2,7 +2,7 @@
 In this repo , I'll get you through APIs of various renowned social media plateform.
 
 ## **Tech Stack**
----
+
 The Tech Stack you can expect from this repo includes:
 - html
 - css
@@ -13,7 +13,7 @@ The Tech Stack you can expect from this repo includes:
 
   
 ## **APIs Plateforms**
----
+
 You can expect basic APIs of following plateforms:
 - Youtube
 - LinkedIn
