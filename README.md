@@ -1,7 +1,7 @@
 # API-Indelvers
 In this repo , I'll get you through APIs of various renowned social media plateform.
 
-##**Tech Stack**
+## **Tech Stack**
 ---
 The Tech Stack you can expect from this repo includes:
 - html
@@ -12,7 +12,7 @@ The Tech Stack you can expect from this repo includes:
 - express.js
 
   
-##**APIs Plateforms**
+## **APIs Plateforms**
 ---
 You can expect basic APIs of following plateforms:
 - Youtube
