@@ -1,0 +1,545 @@
+PS C:\Users\Super\OneDrive\Desktop\Indelvers ft. Linkedin> npm run start
+
+> linkedin-oauth@1.0.0 start
+> node app.js
+
+Server running at http://localhost:4000
+code:AQQtt-f4gveB6tzMISJDJfkNCfq0GryQV77uxKQH3tQZzSH8JXAvJVznIOkPVAYjDqaAqkyD1NYKzbZLj8AcQdw4ltKAEBUaUXCTxcn0slZcHG0XH9SEgyxdFcFjlNI2ZBM_LJZ9hkVHuh1BmkUJ7slVm7iRIzHc1YLOjlJrsvHpQ3-zdFIB52DQ4LsSKA8nGW6i8dKLMmO-N0t29v4
+User Information: {
+  sub: 'Nzvmvy2ycG',
+  email_verified: true,
+  name: 'Ayesha Noreen',
+  locale: { country: 'US', language: 'en' },
+  given_name: 'Ayesha',
+  family_name: 'Noreen',
+  email: 'dgsince2023@gmail.com',
+  picture: 'https://media.licdn.com/dms/image/v2/D4E03AQEanxfXfYjNag/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1722748607473?e=1731542400&v=beta&t=NVjFLkD7a-WzctV7_GLfnujjXQMM13wNKAaYkDA3MiE'
+}
+Request body: [Object: null prototype] {
+  category: 'image',
+  text: "I'm uploading this image via API"
+}
+Files: [Object: null prototype] {
+  image: [
+    {
+      fieldname: 'image',
+      originalname: 'istockphoto-639204554-612x612.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg',
+      destination: 'uploads/',
+      filename: '699a1386489fdfb0da5fff510663f1e7',
+      path: 'uploads\\699a1386489fdfb0da5fff510663f1e7',
+      size: 37009
+    }
+  ]
+}
+Media upload registration response: {
+  value: {
+    mediaArtifact: 'urn:li:digitalmediaMediaArtifact:(urn:li:digitalmediaAsset:D4E22AQHa-bvU2jGASA,urn:li:digitalmediaMediaArtifactClass:uploaded-image)',
+    uploadMechanism: {
+      'com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest': [Object]
+    },
+    asset: 'urn:li:digitalmediaAsset:D4E22AQHa-bvU2jGASA',
+    assetRealTimeTopic: 'urn:li-realtime:digitalmediaAssetUpdatesTopic:urn:li:digitalmediaAsset:D4E22AQHa-bvU2jGASA'
+  }
+}
+Upload URL: https://www.linkedin.com/dms-uploads/sp/D4E22AQHa-bvU2jGASA/uploaded-image/0?ca=vector_feedshare&cn=uploads&sync=0&v=beta&ut=2S4FKIBnSp0rs1
+Asset ID: urn:li:digitalmediaAsset:D4E22AQHa-bvU2jGASA
+File upload response: 201 Created
+Updated post data: {
+  "author": "urn:li:person:Nzvmvy2ycG",
+  "lifecycleState": "PUBLISHED",
+  "specificContent": {
+    "com.linkedin.ugc.ShareContent": {
+      "shareCommentary": {
+        "text": "I'm uploading this image via API"
+      },
+      "shareMediaCategory": "IMAGE",
+      "media": [
+        {
+          "status": "READY",
+          "description": {
+            "text": "Media uploaded by user"
+          },
+          "media": "urn:li:digitalmediaAsset:D4E22AQHa-bvU2jGASA"
+        }
+      ]
+    }
+  },
+  "visibility": {
+    "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+  }
+}
+Post created: { id: 'urn:li:share:7240387243637428224' }
+Request body: [Object: null prototype] {
+  category: 'video',
+  text: "I'm uploading this VIDEO via API"
+}
+Files: [Object: null prototype] {
+  image: [
+    {
+      fieldname: 'image',
+      originalname: 'istockphoto-639204554-612x612.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg',
+      destination: 'uploads/',
+      filename: 'd7adec0d7492051d7bb72f44550244bb',
+      path: 'uploads\\d7adec0d7492051d7bb72f44550244bb',
+      size: 37009
+    }
+  ],
+  video: [
+    {
+      fieldname: 'video',
+      originalname: 'Gen-2 1288823021, A bright, colorful , cinematic, M 5.mp4',
+      encoding: '7bit',
+      mimetype: 'video/mp4',
+      destination: 'uploads/',
+      filename: '16d44093c4915c5d67501f72fe60b7c2',
+      path: 'uploads\\16d44093c4915c5d67501f72fe60b7c2',
+      size: 1959248
+    }
+  ]
+}
+Media upload registration response: {
+  value: {
+    mediaArtifact: 'urn:li:digitalmediaMediaArtifact:(urn:li:digitalmediaAsset:D4E05AQHX3xXEz74Psw,urn:li:digitalmediaMediaArtifactClass:uploadedVideo)',
+    uploadMechanism: {
+      'com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest': [Object]
+    },
+    asset: 'urn:li:digitalmediaAsset:D4E05AQHX3xXEz74Psw',
+    assetRealTimeTopic: 'urn:li-realtime:digitalmediaAssetUpdatesTopic:urn:li:digitalmediaAsset:D4E05AQHX3xXEz74Psw'
+  }
+}
+Upload URL: https://www.linkedin.com/dms-uploads/sp/D4E05AQHX3xXEz74Psw/uploadedVideo/0?ca=vector_feedshare&cn=uploads_secure&ccn=ambry-video&sync=0&v=beta&ut=2tuY1kwQqr0rs1
+Asset ID: urn:li:digitalmediaAsset:D4E05AQHX3xXEz74Psw
+File upload response: 201 Created
+Updated post data: {
+  "author": "urn:li:person:Nzvmvy2ycG",
+  "lifecycleState": "PUBLISHED",
+  "specificContent": {
+    "com.linkedin.ugc.ShareContent": {
+      "shareCommentary": {
+        "text": "I'm uploading this VIDEO via API"
+      },
+      "shareMediaCategory": "VIDEO",
+      "media": [
+        {
+          "status": "READY",
+          "description": {
+            "text": "Media uploaded by user"
+          },
+          "media": "urn:li:digitalmediaAsset:D4E05AQHX3xXEz74Psw"
+        }
+      ]
+    }
+  },
+  "visibility": {
+    "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+  }
+}
+Post created: { id: 'urn:li:ugcPost:7240387596189642752' }
+Request body: [Object: null prototype] {
+  category: 'video',
+  text: "I'm uploading this VIDEO via API"
+}
+Files: [Object: null prototype] {
+  image: [
+    {
+      fieldname: 'image',
+      originalname: 'istockphoto-639204554-612x612.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg',
+      destination: 'uploads/',
+      filename: 'ac2f290cc00db3d74d23834c7bcb62e8',
+      path: 'uploads\\ac2f290cc00db3d74d23834c7bcb62e8',
+      size: 37009
+    }
+  ],
+  video: [
+    {
+      fieldname: 'video',
+      originalname: 'Gen-2 1288823021, A bright, colorful , cinematic, M 5.mp4',
+      encoding: '7bit',
+      mimetype: 'video/mp4',
+      destination: 'uploads/',
+      filename: '240c02fa96582bd9718b329222308a31',
+      path: 'uploads\\240c02fa96582bd9718b329222308a31',
+      size: 1959248
+    }
+  ]
+}
+Media upload registration response: {
+  value: {
+    mediaArtifact: 'urn:li:digitalmediaMediaArtifact:(urn:li:digitalmediaAsset:D4E05AQExxjl-zAtrGw,urn:li:digitalmediaMediaArtifactClass:uploadedVideo)',
+    uploadMechanism: {
+      'com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest': [Object]
+    },
+    asset: 'urn:li:digitalmediaAsset:D4E05AQExxjl-zAtrGw',
+    assetRealTimeTopic: 'urn:li-realtime:digitalmediaAssetUpdatesTopic:urn:li:digitalmediaAsset:D4E05AQExxjl-zAtrGw'
+  }
+}
+Upload URL: https://www.linkedin.com/dms-uploads/sp/D4E05AQExxjl-zAtrGw/uploadedVideo/0?ca=vector_feedshare&cn=uploads_secure&ccn=ambry-video&sync=0&v=beta&ut=1igbEMHPyr0rs1
+Asset ID: urn:li:digitalmediaAsset:D4E05AQExxjl-zAtrGw
+File upload response: 201 Created
+Updated post data: {
+  "author": "urn:li:person:Nzvmvy2ycG",
+  "lifecycleState": "PUBLISHED",
+  "specificContent": {
+    "com.linkedin.ugc.ShareContent": {
+      "shareCommentary": {
+        "text": "I'm uploading this VIDEO via API"
+      },
+      "shareMediaCategory": "VIDEO",
+      "media": [
+        {
+          "status": "READY",
+          "description": {
+            "text": "Media uploaded by user"
+          },
+          "media": "urn:li:digitalmediaAsset:D4E05AQExxjl-zAtrGw"
+        }
+      ]
+    }
+  },
+  "visibility": {
+    "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+  }
+}
+Post created: { id: 'urn:li:ugcPost:7240387646911393793' }
+Request body: [Object: null prototype] {
+  category: 'video',
+  text: "I'm uploading this VIDEO via API"
+}
+Files: [Object: null prototype] {
+  video: [
+    {
+      fieldname: 'video',
+      originalname: 'Gen-2 1369477863, Children laughing an, cartoon, M 4 (1).mp4',
+      encoding: '7bit',
+      mimetype: 'video/mp4',
+      destination: 'uploads/',
+      filename: 'd1069f9a2eb4abb05ba574a59e878f92',
+      path: 'uploads\\d1069f9a2eb4abb05ba574a59e878f92',
+      size: 4182996
+    }
+  ]
+}
+Media upload registration response: {
+  value: {
+    mediaArtifact: 'urn:li:digitalmediaMediaArtifact:(urn:li:digitalmediaAsset:D4E05AQEN9xhzNBzNMg,urn:li:digitalmediaMediaArtifactClass:uploadedVideo)',
+    uploadMechanism: {
+      'com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest': [Object]
+    },
+    asset: 'urn:li:digitalmediaAsset:D4E05AQEN9xhzNBzNMg',
+    assetRealTimeTopic: 'urn:li-realtime:digitalmediaAssetUpdatesTopic:urn:li:digitalmediaAsset:D4E05AQEN9xhzNBzNMg'
+  }
+}
+Upload URL: https://www.linkedin.com/dms-uploads/sp/D4E05AQEN9xhzNBzNMg/uploadedVideo/0?ca=vector_feedshare&cn=uploads_secure&ccn=ambry-video&sync=0&v=beta&ut=0RRw8ziYWu0rs1
+Asset ID: urn:li:digitalmediaAsset:D4E05AQEN9xhzNBzNMg
+Request body: [Object: null prototype] {
+  category: 'video',
+  text: "I'm uploading this VIDEO via API"
+}
+Files: [Object: null prototype] {
+  video: [
+    {
+      fieldname: 'video',
+      originalname: 'Gen-2 1369477863, Children laughing an, cartoon, M 4 (1).mp4',
+      encoding: '7bit',
+      mimetype: 'video/mp4',
+      destination: 'uploads/',
+      filename: '97535d9ed9a568638895a1d0094418fc',
+      path: 'uploads\\97535d9ed9a568638895a1d0094418fc',
+      size: 4182996
+    }
+  ]
+}
+Media upload registration response: {
+  value: {
+    mediaArtifact: 'urn:li:digitalmediaMediaArtifact:(urn:li:digitalmediaAsset:D4E05AQEOg4Zhcgui9w,urn:li:digitalmediaMediaArtifactClass:uploadedVideo)',
+    uploadMechanism: {
+      'com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest': [Object]
+    },
+    asset: 'urn:li:digitalmediaAsset:D4E05AQEOg4Zhcgui9w',
+    assetRealTimeTopic: 'urn:li-realtime:digitalmediaAssetUpdatesTopic:urn:li:digitalmediaAsset:D4E05AQEOg4Zhcgui9w'
+  }
+}
+Upload URL: https://www.linkedin.com/dms-uploads/sp/D4E05AQEOg4Zhcgui9w/uploadedVideo/0?ca=vector_feedshare&cn=uploads_secure&ccn=ambry-video&sync=0&v=beta&ut=1vzHPcoZWu0rs1
+Asset ID: urn:li:digitalmediaAsset:D4E05AQEOg4Zhcgui9w
+Request body: [Object: null prototype] {
+  category: 'video',
+  text: "I'm uploading this VIDEO via API"
+}
+Files: [Object: null prototype] {
+  video: [
+    {
+      fieldname: 'video',
+      originalname: 'Gen-2 1369477863, Children laughing an, cartoon, M 4 (1).mp4',
+      encoding: '7bit',
+      mimetype: 'video/mp4',
+      destination: 'uploads/',
+      filename: 'e4aac9797027e9090337973b93b39947',
+      path: 'uploads\\e4aac9797027e9090337973b93b39947',
+      size: 4182996
+    }
+  ]
+}
+Request body: [Object: null prototype] {
+  category: 'video',
+  text: "I'm uploading this VIDEO via API"
+}
+Files: [Object: null prototype] {
+  video: [
+    {
+      fieldname: 'video',
+      originalname: 'Gen-2 1369477863, Children laughing an, cartoon, M 4 (1).mp4',
+      encoding: '7bit',
+      mimetype: 'video/mp4',
+      destination: 'uploads/',
+      filename: '928f9518d5ecc54aab48a4a90a8f64d2',
+      path: 'uploads\\928f9518d5ecc54aab48a4a90a8f64d2',
+      size: 4182996
+    }
+  ]
+}
+Request body: [Object: null prototype] {
+  category: 'video',
+  text: "I'm uploading this VIDEO via API"
+}
+Files: [Object: null prototype] {
+  video: [
+    {
+      fieldname: 'video',
+      originalname: 'Gen-2 1369477863, Children laughing an, cartoon, M 4 (1).mp4',
+      encoding: '7bit',
+      mimetype: 'video/mp4',
+      destination: 'uploads/',
+      filename: 'e3e56e3f9363eb3b3345c44810cfd240',
+      path: 'uploads\\e3e56e3f9363eb3b3345c44810cfd240',
+      size: 4182996
+    }
+  ]
+}
+Request body: [Object: null prototype] {
+  category: 'video',
+  text: "I'm uploading this VIDEO via API"
+}
+Files: [Object: null prototype] {
+  video: [
+    {
+      fieldname: 'video',
+      originalname: 'Gen-2 1369477863, Children laughing an, cartoon, M 4 (1).mp4',
+      encoding: '7bit',
+      mimetype: 'video/mp4',
+      destination: 'uploads/',
+      filename: '1868dd060e926849d364e84415265b1a',
+      path: 'uploads\\1868dd060e926849d364e84415265b1a',
+      size: 4182996
+    }
+  ]
+}
+Media upload registration response: {
+  value: {
+    mediaArtifact: 'urn:li:digitalmediaMediaArtifact:(urn:li:digitalmediaAsset:D4E05AQEdjTBGfLDYug,urn:li:digitalmediaMediaArtifactClass:uploadedVideo)',
+    uploadMechanism: {
+      'com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest': [Object]
+    },
+    asset: 'urn:li:digitalmediaAsset:D4E05AQEdjTBGfLDYug',
+    assetRealTimeTopic: 'urn:li-realtime:digitalmediaAssetUpdatesTopic:urn:li:digitalmediaAsset:D4E05AQEdjTBGfLDYug'
+  }
+}
+Upload URL: https://www.linkedin.com/dms-uploads/sp/D4E05AQEdjTBGfLDYug/uploadedVideo/0?ca=vector_feedshare&cn=uploads_secure&ccn=ambry-video&sync=0&v=beta&ut=0UIHBVxBOu0rs1
+Asset ID: urn:li:digitalmediaAsset:D4E05AQEdjTBGfLDYug
+Media upload registration response: {
+  value: {
+    mediaArtifact: 'urn:li:digitalmediaMediaArtifact:(urn:li:digitalmediaAsset:D4E05AQHRuHL7FHrUDw,urn:li:digitalmediaMediaArtifactClass:uploadedVideo)',
+    uploadMechanism: {
+      'com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest': [Object]
+    },
+    asset: 'urn:li:digitalmediaAsset:D4E05AQHRuHL7FHrUDw',
+    assetRealTimeTopic: 'urn:li-realtime:digitalmediaAssetUpdatesTopic:urn:li:digitalmediaAsset:D4E05AQHRuHL7FHrUDw'
+  }
+}
+Upload URL: https://www.linkedin.com/dms-uploads/sp/D4E05AQHRuHL7FHrUDw/uploadedVideo/0?ca=vector_feedshare&cn=uploads_secure&ccn=ambry-video&sync=0&v=beta&ut=1v0bbOZveu0rs1
+Asset ID: urn:li:digitalmediaAsset:D4E05AQHRuHL7FHrUDw
+Media upload registration response: {
+  value: {
+    mediaArtifact: 'urn:li:digitalmediaMediaArtifact:(urn:li:digitalmediaAsset:D4E05AQEwl4swgYsfGQ,urn:li:digitalmediaMediaArtifactClass:uploadedVideo)',
+    uploadMechanism: {
+      'com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest': [Object]
+    },
+    asset: 'urn:li:digitalmediaAsset:D4E05AQEwl4swgYsfGQ',
+    assetRealTimeTopic: 'urn:li-realtime:digitalmediaAssetUpdatesTopic:urn:li:digitalmediaAsset:D4E05AQEwl4swgYsfGQ'
+  }
+}
+Upload URL: https://www.linkedin.com/dms-uploads/sp/D4E05AQEwl4swgYsfGQ/uploadedVideo/0?ca=vector_feedshare&cn=uploads_secure&ccn=ambry-video&sync=0&v=beta&ut=2sBTrC3Tqu0rs1
+Asset ID: urn:li:digitalmediaAsset:D4E05AQEwl4swgYsfGQ
+Media upload registration response: {
+  value: {
+    mediaArtifact: 'urn:li:digitalmediaMediaArtifact:(urn:li:digitalmediaAsset:D4E05AQHLnWwktX2xrQ,urn:li:digitalmediaMediaArtifactClass:uploadedVideo)',
+    uploadMechanism: {
+      'com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest': [Object]
+    },
+    asset: 'urn:li:digitalmediaAsset:D4E05AQHLnWwktX2xrQ',
+    assetRealTimeTopic: 'urn:li-realtime:digitalmediaAssetUpdatesTopic:urn:li:digitalmediaAsset:D4E05AQHLnWwktX2xrQ'
+  }
+}
+Upload URL: https://www.linkedin.com/dms-uploads/sp/D4E05AQHLnWwktX2xrQ/uploadedVideo/0?ca=vector_feedshare&cn=uploads_secure&ccn=ambry-video&sync=0&v=beta&ut=0i1P40maiu0rs1
+Asset ID: urn:li:digitalmediaAsset:D4E05AQHLnWwktX2xrQ
+File upload response: 201 Created
+Updated post data: {
+  "author": "urn:li:person:Nzvmvy2ycG",
+  "lifecycleState": "PUBLISHED",
+  "specificContent": {
+    "com.linkedin.ugc.ShareContent": {
+      "shareCommentary": {
+        "text": "I'm uploading this VIDEO via API"
+      },
+      "shareMediaCategory": "VIDEO",
+      "media": [
+        {
+          "status": "READY",
+          "description": {
+            "text": "Media uploaded by user"
+          },
+          "media": "urn:li:digitalmediaAsset:D4E05AQEN9xhzNBzNMg"
+        }
+      ]
+    }
+  },
+  "visibility": {
+    "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+  }
+}
+File upload response: 201 Created
+Updated post data: {
+  "author": "urn:li:person:Nzvmvy2ycG",
+  "lifecycleState": "PUBLISHED",
+  "specificContent": {
+    "com.linkedin.ugc.ShareContent": {
+      "shareCommentary": {
+        "text": "I'm uploading this VIDEO via API"
+      },
+      "shareMediaCategory": "VIDEO",
+      "media": [
+        {
+          "status": "READY",
+          "description": {
+            "text": "Media uploaded by user"
+          },
+          "media": "urn:li:digitalmediaAsset:D4E05AQEOg4Zhcgui9w"
+        }
+      ]
+    }
+  },
+  "visibility": {
+    "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+  }
+}
+File upload response: 201 Created
+Updated post data: {
+  "author": "urn:li:person:Nzvmvy2ycG",
+  "lifecycleState": "PUBLISHED",
+  "specificContent": {
+    "com.linkedin.ugc.ShareContent": {
+      "shareCommentary": {
+        "text": "I'm uploading this VIDEO via API"
+      },
+      "shareMediaCategory": "VIDEO",
+      "media": [
+        {
+          "status": "READY",
+          "description": {
+            "text": "Media uploaded by user"
+          },
+          "media": "urn:li:digitalmediaAsset:D4E05AQEdjTBGfLDYug"
+        }
+      ]
+    }
+  },
+  "visibility": {
+    "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+  }
+}
+Post created: { id: 'urn:li:ugcPost:7240388418466115584' }
+Post created: { id: 'urn:li:ugcPost:7240388420756283392' }
+File upload response: 201 Created
+Updated post data: {
+  "author": "urn:li:person:Nzvmvy2ycG",
+  "lifecycleState": "PUBLISHED",
+  "specificContent": {
+    "com.linkedin.ugc.ShareContent": {
+      "shareCommentary": {
+        "text": "I'm uploading this VIDEO via API"
+      },
+      "shareMediaCategory": "VIDEO",
+      "media": [
+        {
+          "status": "READY",
+          "description": {
+            "text": "Media uploaded by user"
+          },
+          "media": "urn:li:digitalmediaAsset:D4E05AQHRuHL7FHrUDw"
+        }
+      ]
+    }
+  },
+  "visibility": {
+    "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+  }
+}
+File upload response: 201 Created
+Updated post data: {
+  "author": "urn:li:person:Nzvmvy2ycG",
+  "lifecycleState": "PUBLISHED",
+  "specificContent": {
+    "com.linkedin.ugc.ShareContent": {
+      "shareCommentary": {
+        "text": "I'm uploading this VIDEO via API"
+      },
+      "shareMediaCategory": "VIDEO",
+      "media": [
+        {
+          "status": "READY",
+          "description": {
+            "text": "Media uploaded by user"
+          },
+          "media": "urn:li:digitalmediaAsset:D4E05AQEwl4swgYsfGQ"
+        }
+      ]
+    }
+  },
+  "visibility": {
+    "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+  }
+}
+Post created: { id: 'urn:li:ugcPost:7240388432198270976' }
+Post created: { id: 'urn:li:ugcPost:7240388435335684097' }
+File upload response: 201 Created
+Updated post data: {
+  "author": "urn:li:person:Nzvmvy2ycG",
+  "lifecycleState": "PUBLISHED",
+  "specificContent": {
+    "com.linkedin.ugc.ShareContent": {
+      "shareCommentary": {
+        "text": "I'm uploading this VIDEO via API"
+      },
+      "shareMediaCategory": "VIDEO",
+      "media": [
+        {
+          "status": "READY",
+          "description": {
+            "text": "Media uploaded by user"
+          },
+          "media": "urn:li:digitalmediaAsset:D4E05AQHLnWwktX2xrQ"
+        }
+      ]
+    }
+  },
+  "visibility": {
+    "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+  }
+}
+Post created: { id: 'urn:li:ugcPost:7240388445414596608' }
+Post created: { id: 'urn:li:ugcPost:7240388473264697345' }
