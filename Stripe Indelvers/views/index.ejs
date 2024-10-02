@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+    <title>STRIPE~LINK</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body { padding-top: 80px; background-color: #f8f9fa; }
+        .jumbotron { background-color: white; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        .payment-option { margin-bottom: 20px; }
+        .plan-button {
+            width: 100%;
+            padding: 20px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 10px;
+        }
+        .plan-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .modal-content { border-radius: 15px; }
+        #stripe-form { padding: 20px; }
+        .btn-close-modal {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1><span class="fa fa-chain"></span> STRIPE~LINK</h1>
+        
+        <p>Choose your plan and pay with Stripe:</p>
+        <!-- <a href="/stripe/connect" class="btn btn-danger"><span class="fa fa-stripe"></span> Connect your Stripe Account</a> -->
+        
+        <h3 class="mt-5">Monthly Pricing Plans</h3>
+        <div class="row">
+            <div class="col-md-4 payment-option">
+                <button class="btn btn-primary plan-button" onclick="showStripeForm(990, 'Pro Version')">
+                    <h4>Pro Version</h4>
+                    <p>$9.9 / month</p>
+                    <small>Perfect for individuals</small>
+                </button>
+            </div>
+            <div class="col-md-4 payment-option">
+                <button class="btn btn-success plan-button" onclick="showStripeForm(1990, 'Pro-Team Version')">
+                    <h4>Pro-Team Version</h4>
+                    <p>$19.9 / month</p>
+                    <small>Great for small teams</small>
+                </button>
+            </div>
+            <div class="col-md-4 payment-option">
+                <button class="btn btn-info plan-button" onclick="showStripeForm(2990, 'Pro Enterprise Version')">
+                    <h4>Pro Enterprise Version</h4>
+                    <p>$29.9 / month</p>
+                    <small>For large organizations</small>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="paymentModalLabel">Complete Your Payment</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="stripe-form">
+                    <h4 id="selected-plan"></h4>
+                    <form id="payment-form" action="/payment" method="POST">
+                        <div class="form-group"></div>
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Ayesha Noreen" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="ayeshanoreen092@gmail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address_line1">Address</label>
+                            <input type="text" class="form-control" id="address_line1" name="address_line1" placeholder="Multan,Punjab,Pakistan" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" name="city" placeholder="Multan" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="state">State</label>
+                                <input type="text" class="form-control" id="state" name="state" placeholder="Punjab" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="postal_code">Postal Code</label>
+                                <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="00000" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="country">Country</label>
+                                <input type="text" class="form-control" id="country" name="country" placeholder="Pakistan" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                        <label for="card-element">Credit or debit card</label>
+                        <div id="card-element">
+                            <!-- A Stripe Element will be inserted here. -->
+                        </div>
+                        <!-- Used to display form errors. -->
+                        <div id="card-errors" role="alert"></div>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block mt-4" id="submit-button">Pay Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    var stripe = Stripe('<%= key %>');
+    var elements = stripe.elements();
+    var card = elements.create('card');
+    var currentAmount, currentPlan;
+
+    function showStripeForm(amount, planName) {
+        currentAmount = amount;
+        currentPlan = planName;
+        document.getElementById('selected-plan').textContent = 'Selected Plan: ' + planName;
+        document.getElementById('submit-button').textContent = 'Pay $' + (amount / 100).toFixed(2);
+        
+        // Show the modal
+        $('#paymentModal').modal('show');
+        
+        // Mount the card element if it hasn't been mounted yet
+        if (!card.isMonted) {
+            card.mount('#card-element');
+            card.isMonted = true;
+        }
+    }
+
+    // Set up the payment form submission
+    var form = document.getElementById('payment-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        stripe.createToken(card).then(function(result) {
+            if (result.error) {
+                var errorElement = document.getElementById('card-errors');
+                errorElement.textContent = result.error.message;
+            } else {
+                stripeTokenHandler(result.token);
+            }
+        });
+    });
+
+    function stripeTokenHandler(token) {
+        var form = document.getElementById('payment-form');
+        var hiddenInput = document.createElement('input');
+        hiddenInput.setAttribute('type', 'hidden');
+        hiddenInput.setAttribute('name', 'stripeToken');
+        hiddenInput.setAttribute('value', token.id);
+        form.appendChild(hiddenInput);
+
+        var amountInput = document.createElement('input');
+        amountInput.setAttribute('type', 'hidden');
+        amountInput.setAttribute('name', 'amount');
+        amountInput.setAttribute('value', currentAmount);
+        form.appendChild(amountInput);
+
+        var planInput = document.createElement('input');
+        planInput.setAttribute('type', 'hidden');
+        planInput.setAttribute('name', 'plan');
+        planInput.setAttribute('value', currentPlan);
+        form.appendChild(planInput);
+
+        form.submit();
+    }
+
+    // Ensure the modal is hidden when the close button is clicked
+    $('.close').on('click', function() {
+        $('#paymentModal').modal('hide');
+    });
+</script>
+</body>
+</html>
