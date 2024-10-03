@@ -9,6 +9,9 @@
 <a href="https://www.linkedin.com/in/Khatoonintech/" target="_blank">Ayesha Noreen</a><br>
 <small> SWE Fellow @Confiniti Labs </small>
 </sub>
+
+---
+
 ![LinkedIn](../images/logo-yt.png)
 
 </div>
@@ -162,9 +165,12 @@ The **TagsInput** plugin enhances the video tags field in the form, allowing use
 - **EJS**: Template engine for rendering dynamic content.
 
 ---
-<div align='center'>
-<sub>For any query/help ,please contact our developer:
-<a href="https://www.linkedin.com/in/Khatoonintech/" target="_blank">Ayesha Noreen</a><br>
-<small> SWE Fellow @Confiniti Labs </small>
-</sub>
+
+<div align="center">
+<h3>For any query/help ,please contact our developer:</h3>  
+Developer : <a href="https://www.linkedin.com/in/Khatoonintech/" target="_blank">Ayesha Noreen</a><br>
+	<small> SWE Fellow @Confiniti Labs </small>
+<br> <a href="https://www.github.com/Khatoonintech/" target="_blank"> Don't forget to ⭐ our repo </a><br>
+
+
 </div>
