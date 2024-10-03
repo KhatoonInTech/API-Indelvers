@@ -174,14 +174,14 @@ This file contains the Stripe API keys (`PUBLISHABLE_KEY` and `SECRET_KEY`) that
 
 Get these keys by following the guide below
 
-<h3>Step # 1:</h3>
+**Step # 1:**
 - Go to the [Stripe Dashboard](https://dashboard.stripe.com/)
 - Follow the instructions prompted to you and create an account
 - Get to the [following page](https://dashboard.stripe.com/test/dashboard)
 
 ![step1](../images/StripeDashboard.png)
 
-<h3>Step # 2:</h3>
+**Step # 2:**
 - Get to the [following page](https://dashboard.stripe.com/test/dashboard)
 - Get Your API keys from this page
 
