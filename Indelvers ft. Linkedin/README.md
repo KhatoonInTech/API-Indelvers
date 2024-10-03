@@ -9,6 +9,9 @@
 <a href="https://www.linkedin.com/in/Khatoonintech/" target="_blank">Ayesha Noreen</a><br>
 <small> SWE Fellow @Confiniti Labs </small>
 </sub>
+
+
+---
 ![LinkedIn](../images/logo-hero.png)
 
 </div>
@@ -257,8 +260,14 @@ if (err instanceof multer.MulterError) {
 
 This LinkedIn Integration project demonstrates a full-stack Node.js application that integrates LinkedIn OAuth 2.0 for user authentication, media uploads, and content posting. The project is modular, scalable, and provides a foundation for integrating social media features into any Node.js application.
 
+---
 
-<sub>For any query/help ,please contact our developer:
-<a href="https://www.linkedin.com/in/Khatoonintech/" target="_blank">Ayesha Noreen</a><br>
-<small> SWE Fellow @Confiniti Labs </small>
-</sub>
+<div align="center">
+<h3>For any query/help ,please contact our developer:</h3>  
+Developer : <a href="https://www.linkedin.com/in/Khatoonintech/" target="_blank">Ayesha Noreen</a><br>
+	<small> SWE Fellow @Confiniti Labs </small>
+<br> <a href="https://www.github.com/Khatoonintech/" target="_blank"> Don't forget to ⭐ our repo </a><br>
+
+
+</div>
+
